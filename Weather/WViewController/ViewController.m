@@ -11,24 +11,26 @@
 #import "WCenter.h"
 #import "WTableViewCell.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    WCenter *cInstance;
+    bool locationViewOpened;
+    NSString *locationCity;
+}
 
 @end
 
 @implementation ViewController
 
-WCenter *cInstance;
-bool locationViewOpened;
-NSString *locationCity;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+//    SPINNER FOR LOADING
 //    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
 //    spinner.center = CGPointMake(160, 350);
 //    spinner.tag = 1;
 //    [self.view addSubview:spinner];
 //    [spinner startAnimating];
+    
     locationCity = @"";
     locationViewOpened = false;
     [self unhide];
@@ -169,7 +171,6 @@ NSString *locationCity;
                         completion:nil];
         locationViewOpened = true;
     } else {
-        
         [UIView transitionWithView:_locationView
                           duration:0.4
                            options:UIViewAnimationOptionTransitionNone

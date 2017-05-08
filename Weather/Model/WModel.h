@@ -13,7 +13,6 @@
 
 @property(nonatomic, strong) NSArray<WDayModel *> *days;
 @property(nonatomic, strong) NSString *city;
-
 - (void) updateModel:(NSMutableArray *) data;
 
 
