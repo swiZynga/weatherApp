@@ -13,7 +13,7 @@
 @implementation WCenter
 
 
-- (void)passDataFromProvider: (void (^)(WModel *dataModel))callback
+- (void)modelFromData: (void (^)(WModel *dataModel))callback
 {
     WProvider *pInstance = [[WProvider alloc] init];
     [pInstance fetchDataWithCallback:^(NSData *data, NSError *error) {

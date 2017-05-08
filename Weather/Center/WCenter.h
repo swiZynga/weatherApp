@@ -11,7 +11,7 @@
 
 @interface WCenter : NSObject
 
-- (void)passDataFromProvider: (void (^)(WModel *dataModel))callback;
+- (void)modelFromData: (void (^)(WModel *dataModel))callback;
 
 
 @end

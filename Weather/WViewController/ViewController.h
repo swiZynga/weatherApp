@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *city;
 @property (weak, nonatomic) IBOutlet UILabel *curWeather;
@@ -37,6 +37,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *wImage3;
 @property (weak, nonatomic) IBOutlet UIImageView *wImage4;
 @property (weak, nonatomic) IBOutlet UIImageView *wImage5;
+
+@property (weak, nonatomic) IBOutlet UIView *locationView;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (weak, nonatomic) IBOutlet UIButton *setLocation;
+
+
+- (void)cityUserInput: (void (^)(NSString *city))callback;
 
 
 @end

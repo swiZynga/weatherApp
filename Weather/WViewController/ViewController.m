@@ -18,6 +18,8 @@
 @implementation ViewController
 
 WCenter *cInstance;
+bool locationViewOpened;
+NSString *locationCity;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,9 +29,13 @@ WCenter *cInstance;
 //    spinner.tag = 1;
 //    [self.view addSubview:spinner];
 //    [spinner startAnimating];
-    
+    locationCity = @"";
+    locationViewOpened = false;
+    [self unhide];
+    _locationTextField.returnKeyType = UIReturnKeyDone;
+    [_locationTextField setDelegate:self];
     cInstance = [[WCenter alloc] init];
-    [cInstance passDataFromProvider:^(WModel *dataModel) {
+    [cInstance modelFromData:^(WModel *dataModel) {
         [self update:dataModel];
     }];
     
@@ -49,6 +55,7 @@ WCenter *cInstance;
     self.todayDay.text = [dayOne getName];
     self.todayLow.text = [dayOne getLow];
     self.todayHigh.text = [dayOne getHigh];
+    self.city.text = [dayOne getCityName];
     
     self.day2.text = [dayTwo getName];
     self.day3.text = [dayThree getName];
@@ -101,6 +108,108 @@ WCenter *cInstance;
         }
     }
 }
+
+- (void) hide
+{
+    _day2.hidden = true;
+    _day3.hidden = true;
+    _day4.hidden = true;
+    _day5.hidden = true;
+    _high2.hidden = true;
+    _high3.hidden = true;
+    _high4.hidden = true;
+    _high5.hidden = true;
+    _low2.hidden = true;
+    _low3.hidden = true;
+    _low4.hidden = true;
+    _low5.hidden = true;
+    _wImage2.hidden = true;
+    _wImage3.hidden = true;
+    _wImage4.hidden = true;
+    _wImage5.hidden = true;
+    _cancelBtn.hidden = false;
+    _locationTextField.hidden = false;
+}
+
+- (void) unhide
+{
+    _day2.hidden = false;
+    _day3.hidden = false;
+    _day4.hidden = false;
+    _day5.hidden = false;
+    _high2.hidden = false;
+    _high3.hidden = false;
+    _high4.hidden = false;
+    _high5.hidden = false;
+    _low2.hidden = false;
+    _low3.hidden = false;
+    _low4.hidden = false;
+    _low5.hidden = false;
+    _wImage2.hidden = false;
+    _wImage3.hidden = false;
+    _wImage4.hidden = false;
+    _wImage5.hidden = false;
+    _cancelBtn.hidden = true;
+    _locationTextField.hidden = true;
+}
+
+- (IBAction)setLocation:(id)sender
+{
+
+    if (!locationViewOpened) {
+        [UIView transitionWithView:_locationView
+                          duration:0.4
+                           options:UIViewAnimationOptionTransitionNone
+                        animations:^{
+                            _locationView.frame = CGRectMake(0, 346, 375, 321);
+                            _locationView.alpha = 0.8;
+                            _locationView.backgroundColor = [UIColor blackColor];
+                            [self hide];
+                        }
+                        completion:nil];
+        locationViewOpened = true;
+    } else {
+        
+        [UIView transitionWithView:_locationView
+                          duration:0.4
+                           options:UIViewAnimationOptionTransitionNone
+                        animations:^{
+                            _locationView.frame = CGRectMake(0, 613, 375, 54);
+                            _locationView.alpha = 0.5;
+                            _locationView.backgroundColor = [UIColor whiteColor];
+                            [self unhide];
+                        }
+                        completion:nil];
+        locationViewOpened = false;
+    }
+}
+
+- (IBAction)cancelBtn:(id)sender
+{
+    [_setLocation sendActionsForControlEvents:UIControlEventTouchUpInside];
+    [_locationTextField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    [_setLocation sendActionsForControlEvents:UIControlEventTouchUpInside];
+    locationCity = textField.text;
+    cInstance = [[WCenter alloc] init];
+    [cInstance modelFromData:^(WModel *dataModel) {
+        [self update:dataModel];
+    }];
+    
+    return YES;
+}
+
+
+- (void)cityUserInput: (void (^)(NSString *city))callback
+{
+    callback([locationCity copy]);
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

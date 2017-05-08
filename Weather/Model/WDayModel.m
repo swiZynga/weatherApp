@@ -10,7 +10,7 @@
 
 @implementation WDayModel
 
-- (id) initWithdayName:(NSString *)dayName weatherDesc:(NSString *)description highTemp:(NSString *)highT lowTemp:(NSString *)lowT currTemp:(NSString *)curT
+- (id) initWithdayName:(NSString *)dayName weatherDesc:(NSString *)description highTemp:(NSString *)highT lowTemp:(NSString *)lowT currTemp:(NSString *)curT city:(NSString *)location
 {
     if (self = [super init]) {
         name = dayName;
@@ -18,6 +18,7 @@
         high = highT;
         low = lowT;
         current = curT;
+        cityName = location;
     }
     
     return self;
@@ -46,6 +47,11 @@
 -(NSString *) getCurrent
 {
     return current;
+}
+
+-(NSString *) getCityName
+{
+    return cityName;
 }
 
 @end

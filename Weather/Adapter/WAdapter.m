@@ -38,7 +38,9 @@
 - (NSMutableArray *) dictToArray: (NSDictionary *)dict {
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
     NSMutableArray *check = [dict valueForKey:@"list"];
+    NSDictionary *cityList = [dict valueForKey:@"city"];
     NSMutableArray *dayList = [self getFiveDays];
+    NSString *city = [cityList valueForKey:@"name"];
     for (int i = 0; i <= 4; ++i) {
         NSMutableArray *weatherArr = [check[i] valueForKey:@"weather"];
         NSDictionary *main = [check[i] valueForKey:@"main"];
@@ -47,7 +49,7 @@
         NSNumber *lowTemp = [main valueForKey:@"temp_min"];
         NSNumber *current = [main valueForKey:@"temp"];
         NSString *dayName = dayList[i];
-        NSDictionary *day = @{@"description":weather, @"high":highTemp, @"low":lowTemp, @"current":current, @"day":dayName};
+        NSDictionary *day = @{@"description":weather, @"high":highTemp, @"low":lowTemp, @"current":current, @"day":dayName, @"city":city};
         [newArray addObject:day];
     }
     
@@ -57,6 +59,7 @@
 
 - (WModel *)convertDataToModel:(NSData *)data
 {
+    
     NSDictionary *parsed = [self rawDataToDict:data];
     NSMutableArray *dataList = [self dictToArray:parsed];
     WModel *mInstance = [[WModel alloc] init];

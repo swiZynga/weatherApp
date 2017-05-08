@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0AA77B41EBCC4F100DF7FEC /* WDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77B31EBCC4F100DF7FEC /* WDayModel.m */; };
+		F0AA77B81EBCC52C00DF7FEC /* WAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77B71EBCC52C00DF7FEC /* WAdapter.m */; };
+		F0AA77BC1EBCC55A00DF7FEC /* WCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77BB1EBCC55A00DF7FEC /* WCenter.m */; };
+		F0AA77C01EBCC57900DF7FEC /* WProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77BF1EBCC57900DF7FEC /* WProvider.m */; };
+		F0AA77C41EBCC5C100DF7FEC /* WTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77C31EBCC5C100DF7FEC /* WTableViewCell.m */; };
+		F0AA77C81EBCC63600DF7FEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AA77C71EBCC63600DF7FEC /* ViewController.m */; };
+		F0AA77CC1EBD083E00DF7FEC /* city.list.json in Resources */ = {isa = PBXBuildFile; fileRef = F0AA77CB1EBD083E00DF7FEC /* city.list.json */; };
+		F0C56FB51EBA80A5008F3763 /* WModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C56FB41EBA80A5008F3763 /* WModel.m */; };
 		F0CE5E411EB90155000AE2D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5E401EB90155000AE2D1 /* main.m */; };
 		F0CE5E441EB90155000AE2D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5E431EB90155000AE2D1 /* AppDelegate.m */; };
-		F0CE5E471EB90155000AE2D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CE5E461EB90155000AE2D1 /* ViewController.m */; };
 		F0CE5E4A1EB90155000AE2D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CE5E481EB90155000AE2D1 /* Main.storyboard */; };
 		F0CE5E4C1EB90155000AE2D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0CE5E4B1EB90155000AE2D1 /* Assets.xcassets */; };
 		F0CE5E4F1EB90155000AE2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0CE5E4D1EB90155000AE2D1 /* LaunchScreen.storyboard */; };
@@ -35,12 +42,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0AA77B21EBCC4F100DF7FEC /* WDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDayModel.h; sourceTree = "<group>"; };
+		F0AA77B31EBCC4F100DF7FEC /* WDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDayModel.m; sourceTree = "<group>"; };
+		F0AA77B61EBCC52C00DF7FEC /* WAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAdapter.h; sourceTree = "<group>"; };
+		F0AA77B71EBCC52C00DF7FEC /* WAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAdapter.m; sourceTree = "<group>"; };
+		F0AA77BA1EBCC55A00DF7FEC /* WCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCenter.h; sourceTree = "<group>"; };
+		F0AA77BB1EBCC55A00DF7FEC /* WCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCenter.m; sourceTree = "<group>"; };
+		F0AA77BE1EBCC57900DF7FEC /* WProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WProvider.h; sourceTree = "<group>"; };
+		F0AA77BF1EBCC57900DF7FEC /* WProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WProvider.m; sourceTree = "<group>"; };
+		F0AA77C21EBCC5C100DF7FEC /* WTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTableViewCell.h; sourceTree = "<group>"; };
+		F0AA77C31EBCC5C100DF7FEC /* WTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTableViewCell.m; sourceTree = "<group>"; };
+		F0AA77C61EBCC63600DF7FEC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = WViewController/ViewController.h; sourceTree = "<group>"; };
+		F0AA77C71EBCC63600DF7FEC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = WViewController/ViewController.m; sourceTree = "<group>"; };
+		F0AA77CB1EBD083E00DF7FEC /* city.list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.list.json; sourceTree = "<group>"; };
+		F0C56FB31EBA80A5008F3763 /* WModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WModel.h; sourceTree = "<group>"; };
+		F0C56FB41EBA80A5008F3763 /* WModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WModel.m; sourceTree = "<group>"; };
 		F0CE5E3C1EB90155000AE2D1 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0CE5E401EB90155000AE2D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0CE5E421EB90155000AE2D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0CE5E431EB90155000AE2D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F0CE5E451EB90155000AE2D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0CE5E461EB90155000AE2D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0CE5E491EB90155000AE2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0CE5E4B1EB90155000AE2D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0CE5E4E1EB90155000AE2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +98,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0AA77B51EBCC51900DF7FEC /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA77B61EBCC52C00DF7FEC /* WAdapter.h */,
+				F0AA77B71EBCC52C00DF7FEC /* WAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		F0AA77B91EBCC54A00DF7FEC /* Center */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA77BA1EBCC55A00DF7FEC /* WCenter.h */,
+				F0AA77BB1EBCC55A00DF7FEC /* WCenter.m */,
+			);
+			path = Center;
+			sourceTree = "<group>";
+		};
+		F0AA77BD1EBCC57200DF7FEC /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA77BE1EBCC57900DF7FEC /* WProvider.h */,
+				F0AA77BF1EBCC57900DF7FEC /* WProvider.m */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		F0AA77C11EBCC5B200DF7FEC /* WTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA77C21EBCC5C100DF7FEC /* WTableViewCell.h */,
+				F0AA77C31EBCC5C100DF7FEC /* WTableViewCell.m */,
+			);
+			path = WTableView;
+			sourceTree = "<group>";
+		};
+		F0C56FB21EBA806B008F3763 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0C56FB31EBA80A5008F3763 /* WModel.h */,
+				F0C56FB41EBA80A5008F3763 /* WModel.m */,
+				F0AA77B21EBCC4F100DF7FEC /* WDayModel.h */,
+				F0AA77B31EBCC4F100DF7FEC /* WDayModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F0CE5E331EB90155000AE2D1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +168,15 @@
 		F0CE5E3E1EB90155000AE2D1 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				F0AA77C61EBCC63600DF7FEC /* ViewController.h */,
+				F0AA77C71EBCC63600DF7FEC /* ViewController.m */,
+				F0AA77C11EBCC5B200DF7FEC /* WTableView */,
+				F0AA77BD1EBCC57200DF7FEC /* Provider */,
+				F0AA77B91EBCC54A00DF7FEC /* Center */,
+				F0AA77B51EBCC51900DF7FEC /* Adapter */,
+				F0C56FB21EBA806B008F3763 /* Model */,
 				F0CE5E421EB90155000AE2D1 /* AppDelegate.h */,
 				F0CE5E431EB90155000AE2D1 /* AppDelegate.m */,
-				F0CE5E451EB90155000AE2D1 /* ViewController.h */,
-				F0CE5E461EB90155000AE2D1 /* ViewController.m */,
 				F0CE5E481EB90155000AE2D1 /* Main.storyboard */,
 				F0CE5E4B1EB90155000AE2D1 /* Assets.xcassets */,
 				F0CE5E4D1EB90155000AE2D1 /* LaunchScreen.storyboard */,
@@ -117,6 +189,7 @@
 		F0CE5E3F1EB90155000AE2D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0AA77CB1EBD083E00DF7FEC /* city.list.json */,
 				F0CE5E401EB90155000AE2D1 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -247,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CE5E4F1EB90155000AE2D1 /* LaunchScreen.storyboard in Resources */,
+				F0AA77CC1EBD083E00DF7FEC /* city.list.json in Resources */,
 				F0CE5E4C1EB90155000AE2D1 /* Assets.xcassets in Resources */,
 				F0CE5E4A1EB90155000AE2D1 /* Main.storyboard in Resources */,
 			);
@@ -273,9 +347,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CE5E471EB90155000AE2D1 /* ViewController.m in Sources */,
+				F0AA77C81EBCC63600DF7FEC /* ViewController.m in Sources */,
+				F0AA77B81EBCC52C00DF7FEC /* WAdapter.m in Sources */,
+				F0AA77C01EBCC57900DF7FEC /* WProvider.m in Sources */,
 				F0CE5E441EB90155000AE2D1 /* AppDelegate.m in Sources */,
+				F0AA77BC1EBCC55A00DF7FEC /* WCenter.m in Sources */,
+				F0C56FB51EBA80A5008F3763 /* WModel.m in Sources */,
+				F0AA77B41EBCC4F100DF7FEC /* WDayModel.m in Sources */,
 				F0CE5E411EB90155000AE2D1 /* main.m in Sources */,
+				F0AA77C41EBCC5C100DF7FEC /* WTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +589,7 @@
 				F0CE5E6B1EB90155000AE2D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0CE5E6C1EB90155000AE2D1 /* Build configuration list for PBXNativeTarget "WeatherTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +598,7 @@
 				F0CE5E6E1EB90155000AE2D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0CE5E6F1EB90155000AE2D1 /* Build configuration list for PBXNativeTarget "WeatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +607,7 @@
 				F0CE5E711EB90155000AE2D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
