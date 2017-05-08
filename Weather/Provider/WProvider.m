@@ -30,7 +30,6 @@ NSString *fullUrl;
         NSString *newCityId = [[newDict valueForKey:city] stringValue];
         if (!([newCityId length]  == 0)){
             fullUrl = [NSString stringWithFormat:@"%@%@%@", url, newCityId, url2];
-            NSLog(@"Location changed %@ with Url: %@", city, fullUrl);
         } else {
             fullUrl = [NSString stringWithFormat:@"%@%@%@", url, @"5174095", url2];
         }

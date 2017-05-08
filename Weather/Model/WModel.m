@@ -24,6 +24,7 @@
 {
     NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
     [fmt setPositiveFormat:@"0"];
+    
     WDayModel *day1 = [[WDayModel alloc] initWithdayName:[data[0] valueForKey:@"day"] weatherDesc:[data[0] valueForKey:@"description"] highTemp:[fmt stringFromNumber:[data[0] valueForKey:@"high"]] lowTemp:[fmt stringFromNumber:[data[0] valueForKey:@"low"]] currTemp:[fmt stringFromNumber:[data[0] valueForKey:@"current"]] city:[data[0] valueForKey:@"city"]];
     
     WDayModel *day2 = [[WDayModel alloc] initWithdayName:[data[1] valueForKey:@"day"] weatherDesc:[data[1] valueForKey:@"description"] highTemp:[fmt stringFromNumber:[data[1] valueForKey:@"high"]] lowTemp:[fmt stringFromNumber:[data[1] valueForKey:@"low"]] currTemp:@"0" city:[data[0] valueForKey:@"city"]];

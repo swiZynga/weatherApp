@@ -10,7 +10,8 @@
 
 @implementation WAdapter
 
-- (NSDictionary *) rawDataToDict: (NSData *)data {
+- (NSDictionary *) rawDataToDict: (NSData *)data
+{
     NSDictionary *newDict = [[NSDictionary alloc] init];
     NSError* error;
     newDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
@@ -18,7 +19,8 @@
     return newDict;
 }
 
-- (NSMutableArray *) getFiveDays {
+- (NSMutableArray *) getFiveDays
+{
     NSMutableArray *dayList = [[NSMutableArray alloc] init];
     int i = 0;
     while (i < 5) {
@@ -35,7 +37,8 @@
     return dayList;
 }
 
-- (NSMutableArray *) dictToArray: (NSDictionary *)dict {
+- (NSMutableArray *) dictToArray: (NSDictionary *)dict
+{
     NSMutableArray *newArray = [[NSMutableArray alloc] init];
     NSMutableArray *check = [dict valueForKey:@"list"];
     NSDictionary *cityList = [dict valueForKey:@"city"];
